@@ -14,9 +14,10 @@ export class PorPaisComponent {
 
   termino: string = 'Bra'
   hayError: boolean = false;
-  paises : Country[] = []
+  paises: Country[] = []
 
   buscar(terminoArgumento: string) {
+    // debugger;
     this.termino = terminoArgumento
     this.hayError = false;
     this.paisService.buscarPais(this.termino)
@@ -25,10 +26,16 @@ export class PorPaisComponent {
         console.log(paisesResultado)
         this.paises = paisesResultado
 
-      }, (err) =>{
+      }, (err) => {
         this.hayError = true
-        this.paises   = []
+        this.paises = []
       })
+  }
+
+  sugerencias(termino: string) {
+    this.hayError = false
+
+    // TODO crear sugerencias
   }
 
 }

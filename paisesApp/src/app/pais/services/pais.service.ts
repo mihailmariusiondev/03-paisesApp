@@ -15,8 +15,8 @@ export class PaisService {
 
   // Se retorna un Observable (preferente que el tipo de datos esté definido en una interfaz para devolver su tipo, y no un "any"
   buscarPais(termino: string): Observable<Country[]> {
-
+    debugger
     const url = `${this.apiUrl}name/${termino}`
-    return this.http.get<Country[]>(url);      
+    return this.http.get<Country[]>(url);
   }
 }
