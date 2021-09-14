@@ -15,6 +15,7 @@ export class PorPaisComponent {
   termino: string = 'Bra'
   hayError: boolean = false;
   paises: Country[] = []
+  placeholderInput : string = 'Buscar por país...'
 
   buscar(terminoArgumento: string) {
     // debugger;

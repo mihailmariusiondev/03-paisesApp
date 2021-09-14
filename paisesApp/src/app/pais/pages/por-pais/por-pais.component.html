@@ -1,11 +1,12 @@
-<h2>Por country</h2>
+<h2>Por país</h2>
 <hr>
 
 <div class="row">
   <div class="col">
     <app-pais-input
-      (onEnter)="buscar($event)"
-      (onDebounce)="sugerencias($event)"
+      (onEnter)=buscar($event)
+      (onDebounce)=sugerencias($event)
+      [placeholderInput]="placeholderInput"
     ></app-pais-input>
   </div>
 </div>
