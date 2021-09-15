@@ -33,13 +33,11 @@ export class PorRegionComponent {
 
     this.paises = [];
     this.regionActiva = region
-    console.log(region);
 
     this.hayError = false;
     this.paisService.getPaisesPorRegion(this.regionActiva)
       .subscribe(paisesResultado => {
 
-        console.log(paisesResultado)
         this.paises = paisesResultado
 
       }, (err) => {
