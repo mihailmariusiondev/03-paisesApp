@@ -31,4 +31,10 @@ export class PaisService {
       const url = `${this.apiUrl}alpha/${id}`
       return this.http.get<Country[]>(url);
     }
+
+    getPaisesPorRegion(region: string): Observable<Country[]> {
+      // debugger
+      const url = `${this.apiUrl}region/${region}`
+      return this.http.get<Country[]>(url);
+    }
 }

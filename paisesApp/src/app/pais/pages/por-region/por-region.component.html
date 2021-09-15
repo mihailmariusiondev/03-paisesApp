@@ -17,11 +17,19 @@
 
     <button
       *ngFor="let region of regiones"
-      class="btn btn-outline-primary"
-
-      (click)="activarRegion(region)"
+      [class]="getClaseCss(region)"
+      (click)="buscarPorRegion(region)"
     >
-      {{region}}
+      {{region | titlecase}}
     </button>
+
+
+    <div
+      class="row"
+      *ngIf="paises.length > 0"
+    >
+      <div class="col">
+        <app-pais-tabla [paises]=paises></app-pais-tabla>
+      </div>
+    </div>
   </div>
-</div>
